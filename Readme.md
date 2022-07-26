@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Анна Вольферс](https://up.htmlacademy.ru/adaptive/26/user/2122221).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Гуляев](https://htmlacademy.ru/profile/dima).
 
 ---
 
