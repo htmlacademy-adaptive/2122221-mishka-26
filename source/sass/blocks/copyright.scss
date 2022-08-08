@@ -1,0 +1,9 @@
+@use "../global/variables.scss";
+
+.copyright__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: variables.$black;
+}

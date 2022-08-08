@@ -1,0 +1,33 @@
+@use "../global/variables.scss";
+
+.field {
+  margin: 0;
+}
+
+.field__label {
+  font-weight: 700;
+  line-height: 18px;
+  color: variables.$black;
+}
+
+.field__input {
+  font-family: inherit;
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: variables.$black;
+    opacity: 0.3;
+  }
+}
+
+.field__textarea {
+  font-family: inherit;
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: variables.$black;
+    opacity: 0.3;
+  }
+}

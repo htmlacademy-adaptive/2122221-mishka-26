@@ -1,0 +1,12 @@
+@use "../global/variables.scss";
+
+.page__body {
+  margin: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: variables.$gray--darkest;
+  background-color: variables.$white;
+}

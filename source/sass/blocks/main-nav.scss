@@ -1,0 +1,19 @@
+@use "../global/variables.scss";
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-nav__item {
+  box-shadow: 0 1px 0 variables.$gray--dark,
+    inset 0 1px 0 variables.$gray--dark;
+}
+
+.main-nav__link {
+  font-weight: 700;
+  line-height: 24px;
+  color: variables.$black;
+  text-decoration: none;
+}

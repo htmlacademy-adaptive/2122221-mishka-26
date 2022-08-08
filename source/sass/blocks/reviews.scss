@@ -1,0 +1,26 @@
+@use "../global/variables.scss";
+
+.reviews {
+  padding: 0 30px 51px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  margin: 0;
+  font-size: 15px;
+}
+
+.reviews__author-name {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: variables.$black;
+}
+
+.reviews__author-nickname {
+  margin: 0;
+  line-height: 20px;
+}

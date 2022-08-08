@@ -1,0 +1,12 @@
+@use "../global/variables.scss";
+
+.modal-cart {
+  padding: 29px 30px 46px;
+  background-color: variables.$white;
+  border: 1px solid variables.$gray--darken;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal-cart__title {
+  text-transform: uppercase;
+}
