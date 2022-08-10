@@ -1,0 +1,6 @@
+@use "../global/variables.scss";
+
+.modal-overlay {
+  background-color: variables.$white;
+  opacity: 0.9;
+}

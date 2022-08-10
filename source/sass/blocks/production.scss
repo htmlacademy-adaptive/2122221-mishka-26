@@ -1,0 +1,10 @@
+@use "../global/variables.scss";
+
+.production {
+  border: 1px solid variables.$gray--dark;
+}
+
+.production__description {
+  font-size: 13px;
+  line-height: 24px;
+}

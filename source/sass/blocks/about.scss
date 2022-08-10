@@ -1,0 +1,22 @@
+@use "../global/variables.scss";
+
+.about {
+  padding: 0 30px;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about__item {
+  font-weight: 700;
+  line-height: 20px;
+  color: variables.$black;
+}

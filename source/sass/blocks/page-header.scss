@@ -1,0 +1,17 @@
+@use "../global/variables.scss";
+
+.page-header {
+  background-color: variables.$gray;
+  background-repeat: no-repeat;
+
+  &--index-background-image {
+    background-image: url("../img/index/index-header-background-image.jpg");
+  }
+}
+
+.page-header__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 27px;
+  color: variables.$black;
+}

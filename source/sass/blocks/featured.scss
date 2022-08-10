@@ -1,0 +1,37 @@
+@use "../global/variables.scss";
+
+.featured {
+  padding: 0 30px;
+}
+
+.featured__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: variables.$blue;
+  text-transform: uppercase;
+}
+
+.featured__description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.featured__list {
+  margin: 0;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.featured__value {
+  margin: 0;
+}
+
+.featured__price {
+  margin: 0;
+  font-weight: 700;
+  line-height: 24px;
+}
