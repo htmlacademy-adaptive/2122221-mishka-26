@@ -3,54 +3,62 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка. Каталог</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="img/logos/logo-mishka.svg" width="86" height="35"
-        alt="Логотип магазина «Мишка».">
-    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
-              <svg class="main-nav__search-icon" width="18" height="18">
-                <!-- <use xlink:href="img/sprite.svg#icon-search"></use> -->
-              </svg>
-              Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
-              <svg class="main-nav__cart-icon" width="21" height="18">
-                <!-- <use xlink:href="img/sprite.svg#icon-cart"></use> -->
-              </svg>
-              Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--catalog main-nav__item--mobile-menu-closed">
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item main-nav__item--form main-nav__item--mobile-menu-closed">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item main-nav__item--logo">
+          <a class="main-nav__logo" href="index.html">
+            <img class="main-nav__logo-image" src="img/logos/logo-mishka.svg" width="86" height="35"
+              alt="Логотип магазина «Мишка».">
+          </a>
+        </li>
+        <li class="main-nav__item main-nav__item--search main-nav__item--mobile-menu-closed">
+          <a class="main-nav__link" href="#">
+            <svg class="main-nav__search-icon" width="18" height="18">
+              <!-- <use xlink:href="img/sprite.svg#icon-search"></use> -->
+            </svg>
+            Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item main-nav__item--cart main-nav__item--mobile-menu-closed">
+          <a class="main-nav__link" href="#">
+            <svg class="main-nav__cart-icon" width="21" height="18">
+              <!-- <use xlink:href="img/sprite.svg#icon-cart"></use> -->
+            </svg>
+            Корзина: пока пуста</a>
+        </li>
+        <li class="main-nav__item main-nav__item--new">
+          <a class="main-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item main-nav__item--sale">
+          <a class="main-nav__link" href="#">Распродажа</a>
+        </li>
+        <li class="main-nav__item main-nav__item--delivery">
+          <p class="main-nav__link">Бесплатная доставка по России</p>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <header class="page-header">
+  <main class="main-catalog">
+    <header class="main-catalog__page-header page-header">
       <h1 class="page-header__title">Каталог товаров</h1>
     </header>
-    <section class="products">
+    <section class="main-catalog__products products">
       <h2 class="visually-hidden">Товары</h2>
       <ul class="products__list">
         <li class="products__item product-card">
@@ -97,7 +105,7 @@
         </li>
       </ul>
     </section>
-    <section class="production">
+    <section class="main-catalog__production production">
       <h2 class="production__title inner-subtitle">Процесс производства</h2>
       <div class="production__video-container">
         <img class="production__video-preview" src="img/catalog/video-preview.jpg" width="260" height="150"
@@ -105,7 +113,7 @@
       </div>
       <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
         как появляются наши товары.</p>
-      <a class="production__order button" href="#">Сделать заказ</a>
+      <a class="production__order button button--primary" href="#">Сделать заказ</a>
     </section>
   </main>
 
@@ -148,33 +156,34 @@
     </section>
   </footer>
 
-  <div class="modal-overlay modal-overlay--open"></div>
-  <div class="modal-cart">
-    <h2 class="modal-cart__title index-subtitle">Добавить в корзину</h2>
-    <form class="modal-cart__form size-form" action="https://echo.htmlacademy.ru/" method="post">
-      <p class="size-form__title">Выберите размер:</p>
-      <ul class="size-form__list">
-        <li class="size-form__item">
-          <label class="size-form__label">
-            <input class="size-form__input" name="size" type="radio" value="S" checked>
-            S
-          </label>
-        </li>
-        <li class="size-form__item">
-          <label class="size-form__label">
-            <input class="size-form__input" name="size" type="radio" value="M">
-            M
-          </label>
-        </li>
-        <li class="size-form__item">
-          <label class="size-form__label">
-            <input class="size-form__input" name="size" type="radio" value="L">
-            L
-          </label>
-        </li>
-      </ul>
-      <button class="size-form__button button button--modal" type="submit">Добавить</button>
-    </form>
+  <div class="modal-overlay">
+    <div class="modal-cart">
+      <h2 class="modal-cart__title index-subtitle">Добавить в корзину</h2>
+      <form class="modal-cart__form size-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="size-form__title">Выберите размер:</p>
+        <ul class="size-form__list">
+          <li class="size-form__item">
+            <label class="size-form__label">
+              <input class="size-form__input" name="size" type="radio" value="S" checked>
+              S
+            </label>
+          </li>
+          <li class="size-form__item">
+            <label class="size-form__label">
+              <input class="size-form__input" name="size" type="radio" value="M">
+              M
+            </label>
+          </li>
+          <li class="size-form__item">
+            <label class="size-form__label">
+              <input class="size-form__input" name="size" type="radio" value="L">
+              L
+            </label>
+          </li>
+        </ul>
+        <button class="size-form__button button button--secondary" type="submit">Добавить</button>
+      </form>
+    </div>
   </div>
 </body>
 

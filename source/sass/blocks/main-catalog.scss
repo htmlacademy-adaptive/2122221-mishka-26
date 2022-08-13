@@ -1,0 +1,25 @@
+@use "../global/variables.scss";
+
+.main-catalog__products {
+  margin: 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 67px 50px 53px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 111px 50px 57px;
+  }
+}
+
+.main-catalog__production {
+  margin: 0 30px 58px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 50px 64px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 50px 105px;
+  }
+}

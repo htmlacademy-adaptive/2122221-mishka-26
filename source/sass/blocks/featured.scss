@@ -1,7 +1,15 @@
 @use "../global/variables.scss";
 
 .featured {
-  padding: 0 30px;
+  padding: 0 30px 42px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 50px 69px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 50px 96px;
+  }
 }
 
 .featured__title {

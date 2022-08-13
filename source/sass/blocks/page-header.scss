@@ -1,17 +1,42 @@
 @use "../global/variables.scss";
 
 .page-header {
+  min-height: 177px;
   background-color: variables.$gray;
   background-repeat: no-repeat;
 
+  @media (min-width: variables.$tablet-width) {
+    min-height: 238px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 255px;
+  }
+
   &--index-background-image {
+    min-height: 373px;
     background-image: url("../img/index/index-header-background-image.jpg");
+
+    @media (min-width: variables.$tablet-width) {
+      min-height: 693px;
+      padding-top: 53px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      min-height: 690px;
+      padding-top: 56px;
+    }
   }
 }
 
 .page-header__title {
   margin: 0;
+  padding: 74px 30px 30px 30px;
   font-weight: 700;
   font-size: 27px;
   color: variables.$black;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 101px;
+  }
 }

@@ -1,10 +1,17 @@
 @use "../global/variables.scss";
 
 .modal-cart {
+  width: 100%;
+  max-width: 566px;
   padding: 29px 30px 46px;
+  box-sizing: border-box;
   background-color: variables.$white;
   border: 1px solid variables.$gray--darken;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 38px 92px 46px;
+  }
 }
 
 .modal-cart__title {
