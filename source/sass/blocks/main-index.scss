@@ -1,0 +1,70 @@
+@use "../global/variables.scss";
+
+.main-index__page-header {
+  margin-top: -17px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -64px;
+  }
+}
+
+.main-index__menu {
+  margin: -73px 0 31px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: -119px 0 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: -119px 0 54px;
+  }
+}
+
+.main-index__featured {
+  margin-bottom: 31px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.main-index__about {
+  margin-bottom: 61px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 90px;
+  }
+}
+
+.main-index__reviews {
+  margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 71px;
+    margin-left: 50px;
+  }
+}
+
+.main-index__contacts {
+  margin-bottom: 39px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 105px;
+  }
+}

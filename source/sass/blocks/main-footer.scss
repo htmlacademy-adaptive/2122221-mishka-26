@@ -3,4 +3,8 @@
 .main-footer {
   padding: 0 30px;
   background-color: variables.$gray;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 50px;
+  }
 }

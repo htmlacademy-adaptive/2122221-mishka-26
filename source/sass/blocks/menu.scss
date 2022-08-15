@@ -1,9 +1,21 @@
 @use "../global/variables.scss";
 
 .menu {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+}
+
+.menu__item {
+  @media (min-width: variables.$tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .menu__link {

@@ -3,15 +3,18 @@
 .button {
   display: inline-block;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  color: variables.$gray--darkest;
-  background-color: variables.$white;
-  border: 2px solid variables.$gray--darkest;
   text-transform: uppercase;
   text-decoration: none;
 
-  &--modal {
+  &--primary {
+    font-size: 18px;
+    line-height: 20px;
+    color: variables.$gray--darkest;
+    background-color: variables.$white;
+    border: 2px solid variables.$gray--darkest;
+  }
+
+  &--secondary {
     font-size: 17px;
     line-height: 16px;
     color: variables.$white;

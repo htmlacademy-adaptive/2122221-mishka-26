@@ -2,6 +2,16 @@
 
 .reviews {
   padding: 0 30px 51px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 82px 50px 132px;
+    background-image: url("../img/index/index-review-background-image.jpg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 78px 0 186px 175px;
+  }
 }
 
 .reviews__item {

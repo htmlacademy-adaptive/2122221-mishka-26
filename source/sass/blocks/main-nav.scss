@@ -1,14 +1,135 @@
 @use "../global/variables.scss";
 
+.main-nav {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: variables.$white;
+
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    background-color: transparent;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__list {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "catalog"
+    "form"
+    "search"
+    "cart";
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-areas:
+      "logo logo search cart"
+      "catalog form . delivery";
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-areas:
+      "catalog form logo search cart"
+      "new sale . . delivery";
+  }
 }
 
 .main-nav__item {
-  box-shadow: 0 1px 0 variables.$gray--dark,
-    inset 0 1px 0 variables.$gray--dark;
+  // box-shadow: 0 1px 0 variables.$gray--dark,
+  //   inset 0 1px 0 variables.$gray--dark;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &--catalog {
+    grid-area: catalog;
+
+    @media (min-width: variables.$desktop-width) {
+      background-color: variables.$white;
+    }
+  }
+
+  &--form {
+    grid-area: form;
+
+    @media (min-width: variables.$desktop-width) {
+      background-color: variables.$white;
+    }
+  }
+
+  &--logo {
+    grid-area: logo;
+
+    @media (min-width: variables.$tablet-width) {
+      background-color: variables.$white;
+    }
+  }
+
+  &--search {
+    grid-area: search;
+
+    @media (min-width: variables.$tablet-width) {
+      background-color: variables.$white;
+    }
+  }
+
+  &--cart {
+    grid-area: cart;
+
+    @media (min-width: variables.$tablet-width) {
+      background-color: variables.$white;
+    }
+  }
+
+  &--new {
+    display: none;
+    grid-area: new;
+
+    @media (min-width: variables.$desktop-width) {
+      display: block;
+    }
+  }
+
+  &--sale {
+    display: none;
+    grid-area: sale;
+
+    @media (min-width: variables.$desktop-width) {
+      display: block;
+    }
+  }
+
+  &--delivery {
+    display: none;
+    grid-area: delivery;
+
+    @media (min-width: variables.$tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      display: block;
+    }
+  }
+
+  &--mobile-menu-closed {
+    @media (max-width: variables.$tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .main-nav__link {
