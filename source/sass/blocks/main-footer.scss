@@ -1,10 +1,55 @@
 @use "../global/variables.scss";
+@use "../global/base.scss";
 
 .main-footer {
+  width: 100%;
+  background-color: variables.$gray--lighten;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 0 30px;
-  background-color: variables.$gray;
+
+  @include base.container;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 50px 57px;
+  }
+}
+
+.main-footer__logo {
+  display: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:not([href]) {
+    pointer-events: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
+}
+
+.main-footer__logo-image {
+  display: block;
+  width: 102px;
+  height: 34px;
+  color: variables.$black;
+
+  .main-footer__logo:hover &,
+  .main-footer__logo:focus & {
+    color: variables.$blue--darken;
+  }
+
+  .main-footer__logo:active & {
+    opacity: 0.3;
   }
 }

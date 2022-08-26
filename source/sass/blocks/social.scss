@@ -1,7 +1,40 @@
 @use "../global/variables.scss";
 
+.social {
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 26px 0 28px;
+  }
+}
+
 .social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 29px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.social__link {
+  display: flex;
+  padding: 2px 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.social__link-icon {
+  color: variables.$gray--darkest;
+
+  .social__link:hover &,
+  .social__link:focus & {
+    color: variables.$blue--darken;
+  }
+
+  .social__link:active & {
+    opacity: 0.3;
+  }
 }

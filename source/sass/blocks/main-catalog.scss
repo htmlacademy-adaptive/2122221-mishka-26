@@ -1,25 +1,42 @@
 @use "../global/variables.scss";
+@use "../global/base.scss";
 
-.main-catalog__products {
-  margin: 30px;
+.main-catalog__page-header {
+  margin-bottom: 30px;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 67px 50px 53px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 111px 50px 57px;
+    margin-bottom: 111px;
+  }
+}
+
+.main-catalog__products {
+  margin-bottom: 30px;
+
+  @include base.container;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 57px;
   }
 }
 
 .main-catalog__production {
-  margin: 0 30px 58px;
+  margin-bottom: 58px;
+
+  @include base.container;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 50px 64px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 50px 105px;
+    margin-bottom: 103px;
   }
 }

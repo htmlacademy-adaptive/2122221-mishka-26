@@ -1,27 +1,22 @@
 @use "../global/variables.scss";
+@use "../global/base.scss";
 
 .main-index__page-header {
-  margin-top: -17px;
+  margin-bottom: 31px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-top: -64px;
-  }
-}
-
-.main-index__menu {
-  margin: -73px 0 31px;
-
-  @media (min-width: variables.$tablet-width) {
-    margin: -119px 0 40px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: -119px 0 54px;
+    margin-bottom: 54px;
   }
 }
 
 .main-index__featured {
   margin-bottom: 31px;
+
+  @include base.container;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 56px;
@@ -35,6 +30,8 @@
 .main-index__about {
   margin-bottom: 61px;
 
+  @include base.container;
+
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 82px;
   }
@@ -47,24 +44,27 @@
 .main-index__reviews {
   margin-bottom: 38px;
 
+  @include base.container;
+
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 46px;
   }
 
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 71px;
-    margin-left: 50px;
   }
 }
 
 .main-index__contacts {
   margin-bottom: 39px;
 
+  @include base.container;
+
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 57px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin-bottom: 105px;
+    margin-bottom: 103px;
   }
 }

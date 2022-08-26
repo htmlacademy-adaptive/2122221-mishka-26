@@ -1,35 +1,89 @@
 @use "../global/variables.scss";
 
 .menu {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  display: grid;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: variables.$tablet-width) {
-    flex-direction: row;
-    padding: 0 50px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 50px 12px;
   }
-}
 
-.menu__item {
-  @media (min-width: variables.$tablet-width) {
-    flex-grow: 1;
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 17px;
   }
 }
 
 .menu__link {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: variables.$white;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    height: calc(100% + 5px);
+    transform: translateY(-5px);
+    outline: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--interior {
+    padding: 24px 36px 17px 30px;
     background-color: variables.$blue;
+
+    &:hover,
+    &:focus {
+      background-color: variables.$blue--lighten;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 26px 36px 27px 36px;
+    }
   }
 
   &--toys {
+    padding: 23px 27px 20px 30px;
     background-color: variables.$blue--dark;
+
+    &:hover,
+    &:focus {
+      background-color: variables.$blue--darken;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 26px 33px 29px 36px;
+    }
+  }
+}
+
+.menu__link-icon {
+  flex-shrink: 0;
+  opacity: 0.5;
+
+  .menu__link:hover &,
+  .menu__link:focus & {
+    opacity: 0.7;
+  }
+
+  .menu__link:active & {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 4px;
   }
 }

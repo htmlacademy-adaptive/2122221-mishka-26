@@ -1,42 +1,80 @@
 @use "../global/variables.scss";
+@use "../global/base.scss";
 
 .page-header {
-  min-height: 177px;
-  background-color: variables.$gray;
+  position: relative;
+  background-color: variables.$gray--lightest;
   background-repeat: no-repeat;
+  background-size: contain;
 
-  @media (min-width: variables.$tablet-width) {
-    min-height: 238px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    min-height: 255px;
-  }
-
-  &--index-background-image {
-    min-height: 373px;
-    background-image: url("../img/index/index-header-background-image.jpg");
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background-image: url("../img/index/zigzag-fill.svg");
+    background-repeat: repeat-x;
 
     @media (min-width: variables.$tablet-width) {
-      min-height: 693px;
-      padding-top: 53px;
+      height: 24px;
+      background-size: auto 24px;
     }
 
     @media (min-width: variables.$desktop-width) {
-      min-height: 690px;
-      padding-top: 56px;
+      height: 34px;
+      background-size: auto 34px;
     }
+  }
+
+  &--index-background-image {
+    background-image: url("../img/index/index-header-background-image.jpg");
   }
 }
 
 .page-header__title {
   margin: 0;
-  padding: 74px 30px 30px 30px;
+  padding: 74px 30px;
   font-weight: 700;
   font-size: 27px;
   color: variables.$black;
+  text-align: center;
+
+  @include base.container;
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 101px;
+    padding-top: 36px;
+    padding-bottom: 87px;
+    font-size: 43px;
+    line-height: 50px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 37px;
+    padding-bottom: 113px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-header--index-background-image & {
+    padding-top: 73px;
+    padding-bottom: 120px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-top: 90px;
+      padding-bottom: 372px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-top: 93px;
+      padding-bottom: 355px;
+    }
+  }
+}
+
+.page-header__menu {
+  margin: 0;
+
+  @include base.container;
 }

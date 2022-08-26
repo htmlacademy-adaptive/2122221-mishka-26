@@ -3,10 +3,10 @@
 .modal-cart {
   width: 100%;
   max-width: 566px;
-  padding: 29px 30px 46px;
+  padding: 31px 30px 46px;
   box-sizing: border-box;
   background-color: variables.$white;
-  border: 1px solid variables.$gray--darken;
+  border: 1px solid variables.$gray--dark;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
 
   @media (min-width: variables.$tablet-width) {
@@ -15,5 +15,17 @@
 }
 
 .modal-cart__title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 25px;
+  color: variables.$black;
+  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 11px;
+    font-size: 30px;
+    line-height: 57px;
+  }
 }

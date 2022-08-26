@@ -1,45 +1,220 @@
 @use "../global/variables.scss";
 
 .featured {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "subtitle"
+    "title"
+    "description"
+    "image"
+    "price";
   padding: 0 30px 42px;
 
   @media (min-width: variables.$tablet-width) {
+    grid-template-areas:
+      "subtitle subtitle title"
+      "description image image"
+      "price image image";
+    grid-template-columns: 2fr 1fr 1fr;
     padding: 0 50px 69px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 50px 96px;
+    grid-template-areas:
+      "title subtitle image"
+      ". description image"
+      ". price image";
+    grid-template-columns: 175px 2fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    padding-bottom: 96px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    background-image: url("../img/index/zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+
+    @media (min-width: variables.$tablet-width) {
+      height: 17px;
+      background-image: url("../img/index/zigzag-line.svg");
+      background-size: auto 17px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      right: 50px;
+      left: 50px;
+      height: 23px;
+      background-size: auto 23px;
+    }
   }
 }
 
 .featured__title {
+  grid-area: title;
   margin: 0;
+  margin-bottom: 18px;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: variables.$blue;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-self: end;
+    margin-top: 6px;
+    margin-right: 28px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    justify-self: center;
+    margin-top: 69px;
+    margin-right: 11px;
+  }
+
+  & br {
+    @media (max-width: variables.$mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.featured__subtitle {
+  grid-area: subtitle;
+  margin-bottom: 4px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    z-index: 2;
+    grid-column: 2 / -1;
+    margin-top: 61px;
+    margin-bottom: 36px;
+  }
+}
+
+.featured__description-wrapper {
+  grid-area: description;
 }
 
 .featured__description {
   margin: 0;
+  margin-bottom: 18px;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 43px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 58px;
+    margin-bottom: 52px;
+  }
 }
 
 .featured__list {
   margin: 0;
+  margin-bottom: 30px;
   font-size: 15px;
   line-height: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 58px;
+  }
+}
+
+.featured__item {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  padding: 9px 0 10px;
+  border-bottom: 1px solid variables.$gray--light;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 33% 67%;
+    padding: 7px 0 12px;
+  }
+}
+
+.featured__parameter {
+  padding-right: 10px;
 }
 
 .featured__value {
   margin: 0;
 }
 
+.featured__image {
+  display: block;
+  grid-area: image;
+  width: 100%;
+  height: auto;
+  margin-bottom: 26px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 11px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.featured__price-wrapper {
+  grid-area: price;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-content: end;
+    margin-right: 42px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 58px;
+  }
+}
+
 .featured__price {
   margin: 0;
+  margin-bottom: 24px;
   font-weight: 700;
   line-height: 24px;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    margin-right: 6px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.featured__order {
+  @media (min-width: variables.$tablet-width) {
+    max-width: 292px;
+  }
 }

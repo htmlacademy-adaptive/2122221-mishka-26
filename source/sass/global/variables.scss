@@ -1,16 +1,25 @@
 /* colors */
 $white: #ffffff;
-$gray: #f1f1f1;
-$gray--dark: #ececec;
-$gray--darken: #c6c6c6;
-$gray--darkest: #444444;
+$gray--lightest: #f9f9f9;
+$gray--lighten: #f1f1f1;
+$gray--light: #ececec;
+$gray: #e5e5e5;
+$gray--dark: #c6c6c6;
+$gray--darken: #444444;
+$gray--darkest: #231f20;
 $black: #000000;
 
+$blue--lighten: #59d5bc;
 $blue--light: #62d1ba;
 $blue: #63d1bb;
 $blue--dark: #56c3b2;
 $blue--darken: #46c1ae;
 
 /* viewports */
+$mobile-width-only: 767.9px;
 $tablet-width: 768px;
 $desktop-width: 1150px;
+$max-tablet-width: $desktop-width - 1px;
+
+/* others */
+$max-width: 1500px;
