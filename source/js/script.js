@@ -1,5 +1,5 @@
-let mainNav = document.querySelector('.main-nav');
-let mainNavToggle = document.querySelector('.main-nav__toggle');
+const mainNav = document.querySelector('.main-nav');
+const mainNavToggle = document.querySelector('.main-nav__toggle');
 
 mainNav.classList.remove('main-nav--nojs');
 
@@ -14,9 +14,9 @@ mainNavToggle.addEventListener('click', function () {
 });
 
 
-let modalOverlay = document.querySelector('.modal-overlay');
-let featuredButton = document.querySelector('.featured__order');
-let productCardsButtons = document.querySelectorAll('.product-card__cart');
+const modalOverlay = document.querySelector('.modal-overlay');
+const featuredButton = document.querySelector('.featured__order');
+const productCardsButtons = document.querySelectorAll('.product-card__cart');
 
 if (featuredButton) {
   featuredButton.addEventListener('click', function (event) {
@@ -43,11 +43,11 @@ if (modalOverlay) {
 }
 
 
-let reviewsItems = document.querySelectorAll('.reviews__item');
+const reviewsItems = document.querySelectorAll('.reviews__item');
 
 if (reviewsItems.length) {
-  let sliderButtonPrev = document.querySelector('.reviews__button--prev');
-  let sliderButtonNext = document.querySelector('.reviews__button--next');
+  const sliderButtonPrev = document.querySelector('.reviews__button--prev');
+  const sliderButtonNext = document.querySelector('.reviews__button--next');
   let currentReviewNumber;
 
   for (let i = 0; i < reviewsItems.length; i++) {

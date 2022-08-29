@@ -80,11 +80,11 @@
     margin-top: 69px;
     margin-right: 11px;
   }
+}
 
-  & br {
-    @media (max-width: variables.$mobile-width-only) {
-      display: none;
-    }
+.featured__title br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
   }
 }
 

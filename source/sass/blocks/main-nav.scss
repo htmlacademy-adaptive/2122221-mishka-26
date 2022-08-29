@@ -24,11 +24,9 @@
   top: 0;
   right: 0;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 79px;
-  height: 79px;
+  display: block;
+  width: 82px;
+  height: 78px;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -53,55 +51,42 @@
   }
 }
 
-.main-nav__toggle-element {
-  position: relative;
-  height: 2px;
-
+.main-nav--mobile-menu-closed .main-nav__toggle {
   &::before {
     content: "";
     position: absolute;
-    right: 0;
-    left: 0;
+    width: 20px;
     height: 2px;
+    top: 50%;
+    left: 50%;
+    background-color: variables.$gray--darkest;
+    box-shadow: 0 -6px 0 variables.$gray--darkest,
+      0 6px 0 variables.$gray--darkest;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.main-nav--mobile-menu-opened .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 27px;
+    height: 2px;
+    background-color: variables.$black;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
 
   &::after {
     content: "";
     position: absolute;
-    right: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    width: 27px;
     height: 2px;
-  }
-}
-
-.main-nav--mobile-menu-closed .main-nav__toggle-element {
-  width: 20px;
-  background-color: variables.$gray--darkest;
-
-  &::before {
-    top: -6px;
-    background-color: variables.$gray--darkest;
-  }
-
-  &::after {
-    bottom: -6px;
-    background-color: variables.$gray--darkest;
-  }
-}
-
-.main-nav--mobile-menu-opened .main-nav__toggle-element {
-  width: 27px;
-
-  &::before {
     background-color: variables.$black;
-    transform: rotate(45deg);
-    transition: transform 0.2s;
-  }
-
-  &::after {
-    background-color: variables.$black;
-    transform: rotate(-45deg);
-    transition: transform 0.2s;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   }
 }
 

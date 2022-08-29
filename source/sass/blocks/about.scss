@@ -159,10 +159,10 @@
       background-image: url("../img/icons/about-gift.svg");
     }
   }
+}
 
-  & br {
-    @media (max-width: variables.$mobile-width-only) {
-      display: none;
-    }
+.about__item br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
   }
 }
