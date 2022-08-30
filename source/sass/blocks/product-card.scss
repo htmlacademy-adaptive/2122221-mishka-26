@@ -152,13 +152,13 @@
 
 .product-card__cart-icon {
   color: rgba(variables.$black, 0.2);
+}
 
-  .product-card__cart:hover &,
-  .product-card__cart:focus & {
-    color: variables.$blue;
-  }
+.product-card__cart:hover .product-card__cart-icon,
+.product-card__cart:focus .product-card__cart-icon {
+  color: variables.$blue;
+}
 
-  .product-card__cart:active & {
-    color: rgba(variables.$blue, 0.3);
-  }
+.product-card__cart:active .product-card__cart-icon {
+  color: rgba(variables.$blue, 0.3);
 }

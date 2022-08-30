@@ -82,18 +82,18 @@
       background-color: variables.$blue--light;
     }
   }
+}
 
-  .group--checkboxes & {
-    margin-bottom: 24px;
-  }
+.group--checkboxes .group__title {
+  margin-bottom: 24px;
+}
 
-  .group--contacts & {
-    margin-bottom: 7px;
-  }
+.group--contacts .group__title {
+  margin-bottom: 7px;
+}
 
-  .group--additional & {
-    margin-bottom: 24px;
-  }
+.group--additional .group__title {
+  margin-bottom: 24px;
 }
 
 .group__list {
@@ -102,44 +102,44 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
 
-  .group--radio & {
-    justify-items: start;
+.group--radio .group__list {
+  justify-items: start;
 
-    @media (min-width: variables.$tablet-width) {
-      gap: 26px;
-      padding-left: 3px;
-    }
+  @media (min-width: variables.$tablet-width) {
+    gap: 26px;
+    padding-left: 3px;
+  }
+}
+
+.group--checkboxes .group__list {
+  justify-items: start;
+  gap: 23px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 23px;
   }
 
-  .group--checkboxes & {
-    justify-items: start;
-    gap: 23px;
-
-    @media (min-width: variables.$tablet-width) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px 23px;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px 0;
-    }
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 0;
   }
+}
 
-  .group--name-fields & {
-    gap: 20px;
+.group--name-fields .group__list {
+  gap: 20px;
 
-    @media (min-width: variables.$tablet-width) {
-      gap: 24px;
-    }
+  @media (min-width: variables.$tablet-width) {
+    gap: 24px;
   }
+}
 
-  .group--contacts & {
-    gap: 33px;
+.group--contacts .group__list {
+  gap: 33px;
 
-    @media (min-width: variables.$tablet-width) {
-      gap: 24px;
-    }
+  @media (min-width: variables.$tablet-width) {
+    gap: 24px;
   }
 }

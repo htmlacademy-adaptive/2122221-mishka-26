@@ -74,16 +74,16 @@
   flex-shrink: 0;
   opacity: 0.5;
 
-  .menu__link:hover &,
-  .menu__link:focus & {
-    opacity: 0.7;
-  }
-
-  .menu__link:active & {
-    opacity: 0.3;
-  }
-
   @media (min-width: variables.$tablet-width) {
     padding-top: 4px;
   }
+}
+
+.menu__link:hover .menu__link-icon,
+.menu__link:focus .menu__link-icon {
+  opacity: 0.7;
+}
+
+.menu__link:active .menu__link-icon {
+  opacity: 0.3;
 }

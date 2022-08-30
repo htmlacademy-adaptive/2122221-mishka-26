@@ -87,11 +87,6 @@
   color: rgba(variables.$black, 0.2);
   pointer-events: none;
 
-  .field__input:hover + &,
-  .field__input:focus + & {
-    color: variables.$blue--light;
-  }
-
   &--phone {
     top: 11px;
     right: 7px;
@@ -118,6 +113,11 @@
       right: 4px;
     }
   }
+}
+
+.field__input:hover + .field__icon,
+.field__input:focus + .field__icon {
+  color: variables.$blue--light;
 }
 
 .field__textarea {

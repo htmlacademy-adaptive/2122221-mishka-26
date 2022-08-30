@@ -48,13 +48,13 @@
     opacity: 0.3;
   }
 
-  .main-nav--nojs & {
-    display: none;
-  }
-
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
 
 .main-nav--mobile-menu-closed .main-nav__toggle {
@@ -221,11 +221,11 @@
       box-shadow: inset 1px 0 0 variables.$gray--light,
         inset -1px 0 0 variables.$gray--light;
     }
+  }
 
-    & span {
-      @media (min-width: variables.$tablet-width) {
-        @include base.visually-hidden;
-      }
+  &--search span {
+    @media (min-width: variables.$tablet-width) {
+      @include base.visually-hidden;
     }
   }
 
@@ -240,20 +240,20 @@
       display: flex;
     }
   }
+}
 
-  .main-nav--mobile-menu-closed &--mobile-menu {
-    @media (max-width: variables.$mobile-width-only) {
-      display: none;
-    }
+.main-nav--mobile-menu-closed .main-nav__item--mobile-menu {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
   }
+}
 
-  .main-nav--mobile-menu-opened &--mobile-menu,
-  .main-nav--nojs &--mobile-menu {
-    @media (max-width: variables.$mobile-width-only) {
-      display: flex;
-      padding: 0 30px;
-      box-sizing: border-box;
-    }
+.main-nav--mobile-menu-opened .main-nav__item--mobile-menu,
+.main-nav--nojs .main-nav__item--mobile-menu {
+  @media (max-width: variables.$mobile-width-only) {
+    display: flex;
+    padding: 0 30px;
+    box-sizing: border-box;
   }
 }
 
@@ -379,15 +379,6 @@
   position: absolute;
   left: 0;
 
-  .main-nav__link:hover &,
-  .main-nav__link:focus & {
-    color: variables.$blue;
-  }
-
-  .main-nav__link:active & {
-    color: rgba(variables.$blue, 0.3);
-  }
-
   @media (min-width: variables.$tablet-width) {
     position: static;
     display: block;
@@ -395,17 +386,26 @@
   }
 }
 
+.main-nav__link:hover .main-nav__search-icon,
+.main-nav__link:focus .main-nav__search-icon {
+  color: variables.$blue;
+}
+
+.main-nav__link:active .main-nav__search-icon {
+  color: rgba(variables.$blue, 0.3);
+}
+
 .main-nav__cart-icon {
   color: rgba(variables.$black, 0.2);
   position: absolute;
   left: 0;
+}
 
-  .main-nav__link:hover &,
-  .main-nav__link:focus & {
-    color: variables.$blue;
-  }
+.main-nav__link:hover .main-nav__cart-icon,
+.main-nav__link:focus .main-nav__cart-icon {
+  color: variables.$blue;
+}
 
-  .main-nav__link:active & {
-    color: rgba(variables.$blue, 0.3);
-  }
+.main-nav__link:active .main-nav__cart-icon {
+  color: rgba(variables.$blue, 0.3);
 }

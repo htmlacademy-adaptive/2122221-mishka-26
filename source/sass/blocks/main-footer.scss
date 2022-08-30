@@ -43,13 +43,13 @@
   width: 102px;
   height: 34px;
   color: variables.$black;
+}
 
-  .main-footer__logo:hover &,
-  .main-footer__logo:focus & {
-    color: variables.$blue--darken;
-  }
+.main-footer__logo:hover .main-footer__logo-image,
+.main-footer__logo:focus .main-footer__logo-image {
+  color: variables.$blue--darken;
+}
 
-  .main-footer__logo:active & {
-    opacity: 0.3;
-  }
+.main-footer__logo:active .main-footer__logo-image {
+  opacity: 0.3;
 }

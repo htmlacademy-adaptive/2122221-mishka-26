@@ -202,15 +202,15 @@
 .reviews__button-icon {
   display: block;
   color: variables.$black;
+}
 
-  .reviews__button:hover &,
-  .reviews__button:focus & {
-    color: rgba(variables.$black, 0.6);
-  }
+.reviews__button:hover .reviews__button-icon,
+.reviews__button:focus .reviews__button-icon {
+  color: rgba(variables.$black, 0.6);
+}
 
-  .reviews__button:active & {
-    color: rgba(variables.$black, 0.3);
-  }
+.reviews__button:active .reviews__button-icon {
+  color: rgba(variables.$black, 0.3);
 }
 
 .reviews__write {

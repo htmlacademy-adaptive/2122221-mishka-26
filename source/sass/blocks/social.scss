@@ -28,13 +28,13 @@
 
 .social__link-icon {
   color: variables.$gray--darkest;
+}
 
-  .social__link:hover &,
-  .social__link:focus & {
-    color: variables.$blue--darken;
-  }
+.social__link:hover .social__link-icon,
+.social__link:focus .social__link-icon {
+  color: variables.$blue--darken;
+}
 
-  .social__link:active & {
-    opacity: 0.3;
-  }
+.social__link:active .social__link-icon {
+  opacity: 0.3;
 }

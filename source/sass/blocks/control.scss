@@ -30,73 +30,73 @@
   flex-shrink: 0;
   box-sizing: border-box;
   border: 2px solid variables.$gray--darken;
+}
 
-  .control:hover &,
-  .control__input:focus + & {
-    border-color: variables.$blue--light;
+.control:hover .control__mark,
+.control__input:focus + .control__mark {
+  border-color: variables.$blue--light;
+}
+
+.control:active .control__mark {
+  border-color: rgba(variables.$blue--light, 0.3);
+}
+
+.control--radio .control__mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 49px;
+    height: 49px;
   }
+}
 
-  .control:active & {
-    border-color: rgba(variables.$blue--light, 0.3);
+.control--radio .control__input:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: variables.$blue--light;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 23px;
+    height: 23px;
   }
+}
 
-  .control--radio & {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.control--checkbox .control__mark {
+  width: 38px;
+  height: 38px;
 
-    @media (min-width: variables.$tablet-width) {
-      width: 49px;
-      height: 49px;
-    }
+  @media (min-width: variables.$tablet-width) {
+    width: 52px;
+    height: 52px;
   }
+}
 
-  .control--radio .control__input:checked + &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    margin: auto;
-    border-radius: 50%;
-    background-color: variables.$blue--light;
+.control--checkbox .control__input:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  left: 0;
+  width: 10px;
+  height: 20px;
+  margin: 0 auto;
+  border-right: 2px solid variables.$black;
+  border-bottom: 2px solid variables.$black;
+  transform: rotate(45deg);
 
-    @media (min-width: variables.$tablet-width) {
-      width: 23px;
-      height: 23px;
-    }
-  }
-
-  .control--checkbox & {
-    width: 38px;
-    height: 38px;
-
-    @media (min-width: variables.$tablet-width) {
-      width: 52px;
-      height: 52px;
-    }
-  }
-
-  .control--checkbox .control__input:checked + &::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: 0;
-    left: 0;
-    width: 10px;
-    height: 20px;
-    margin: 0 auto;
-    border-right: 2px solid variables.$black;
-    border-bottom: 2px solid variables.$black;
-    transform: rotate(45deg);
-
-    @media (min-width: variables.$tablet-width) {
-      top: 6px;
-      width: 14px;
-      height: 27px;
-    }
+  @media (min-width: variables.$tablet-width) {
+    top: 6px;
+    width: 14px;
+    height: 27px;
   }
 }

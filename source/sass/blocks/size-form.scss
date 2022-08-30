@@ -46,12 +46,15 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover,
-  .size-form__input:focus + & {
+  &:hover {
     border: 2px solid rgba(variables.$gray--darken, 0.3);
   }
+}
 
-  .size-form__input:checked + & {
-    border: 2px solid variables.$blue--light;
-  }
+.size-form__input:focus + .size-form__label {
+  border: 2px solid rgba(variables.$gray--darken, 0.3);
+}
+
+.size-form__input:checked + .size-form__label {
+  border: 2px solid variables.$blue--light;
 }

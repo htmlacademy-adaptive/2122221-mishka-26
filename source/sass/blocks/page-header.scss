@@ -56,20 +56,20 @@
     font-size: 53px;
     line-height: 57px;
   }
+}
 
-  .page-header--index-background-image & {
-    padding-top: 73px;
-    padding-bottom: 120px;
+.page-header--index-background-image .page-header__title {
+  padding-top: 73px;
+  padding-bottom: 120px;
 
-    @media (min-width: variables.$tablet-width) {
-      padding-top: 90px;
-      padding-bottom: 372px;
-    }
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 90px;
+    padding-bottom: 372px;
+  }
 
-    @media (min-width: variables.$desktop-width) {
-      padding-top: 93px;
-      padding-bottom: 355px;
-    }
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 93px;
+    padding-bottom: 355px;
   }
 }
 
