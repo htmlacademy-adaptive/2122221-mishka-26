@@ -34,13 +34,13 @@
 
 .copyright__logo-htmlacademy {
   color: variables.$blue;
+}
 
-  .copyright__link:hover &,
-  .copyright__link:focus & {
-    color: variables.$blue--darken;
-  }
+.copyright__link:hover .copyright__logo-htmlacademy,
+.copyright__link:focus .copyright__logo-htmlacademy {
+  color: variables.$blue--darken;
+}
 
-  .copyright__link:active & {
-    opacity: 0.3;
-  }
+.copyright__link:active .copyright__logo-htmlacademy {
+  opacity: 0.3;
 }

@@ -4,12 +4,18 @@
 .main-nav {
   position: absolute;
   z-index: 10;
+  display: grid;
   width: 100%;
   background-color: variables.$white;
 
   @media (min-width: variables.$tablet-width) {
     position: relative;
-    background-image: linear-gradient(to bottom, variables.$white 89px, variables.$gray--light 1px, variables.$gray--lightest 90px);
+    grid-template-columns: 48% 52%;
+    background-color: variables.$gray--lightest;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr max-content 1fr;
   }
 
   &--nojs {
@@ -90,32 +96,102 @@
   }
 }
 
-.main-nav__list {
-  display: grid;
-  grid-template-areas:
-    "logo"
-    "catalog"
-    "form"
-    "search"
-    "cart";
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.main-nav__list-wrapper {
+  &--site-list {
+    @media (min-width: variables.$desktop-width) {
+      background-color: variables.$white;
+      box-shadow: inset 0 -1px 0 variables.$gray--light;
+    }
+  }
 
-  @include base.container;
+  &--user-list {
+    @media (min-width: variables.$tablet-width) {
+      order: -1;
+      background-color: variables.$white;
+      box-shadow: inset 0 -1px 0 variables.$gray--light;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      order: 0;
+    }
+  }
+
+  &--promo-list {
+    @media (max-width: variables.$max-tablet-width) {
+      @include base.visually-hidden;
+    }
+  }
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  order: -1;
 
   @media (min-width: variables.$tablet-width) {
-    grid-template-areas:
-      "logo logo search cart"
-      "catalog form delivery delivery";
-    grid-template-columns: 28.5% 19.5% minmax(84px, max-content) auto;
+    order: -2;
+    padding-left: 50px;
+    background-color: variables.$white;
+    box-shadow: inset 0 -1px 0 variables.$gray--light;
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-areas:
-      "catalog form logo search cart"
-      "new sale . delivery delivery";
-    grid-template-columns: 20.5% 23% 22% minmax(84px, max-content) auto;
+    order: 0;
+    padding-left: 0;
+  }
+}
+
+.main-nav__list {
+  max-width: 675px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--site-list {
+    @media (min-width: variables.$tablet-width) {
+      gap: 0 37px;
+      padding-right: 13px;
+      padding-left: 50px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      gap: 0 33px;
+      margin-left: auto;
+      padding-right: 76px;
+    }
+  }
+
+  &--user-list {
+    @media (min-width: variables.$tablet-width) {
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 50px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      gap: 0 33px;
+      margin-right: auto;
+      padding-left: 100px;
+    }
+  }
+
+  &--promo-list {
+    @media (min-width: variables.$tablet-width) {
+      gap: 0 63px;
+      padding-left: 50px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      gap: 0 20px;
+      margin-left: auto;
+      padding-right: 93px;
+      padding-left: 50px;
+    }
   }
 }
 
@@ -127,56 +203,23 @@
       inset 0 1px 0 variables.$gray--light;
   }
 
+  @media (min-width: variables.$tablet-width) {
+    flex-grow: 1;
+  }
+
   &--catalog {
-    grid-area: catalog;
-
-    @media (min-width: variables.$tablet-width) {
-      padding-left: 50px;
-    }
-
     @media (min-width: variables.$desktop-width) {
-      background-color: variables.$white;
-      box-shadow: inset -1px 0 0 variables.$gray--light,
-        inset 0 -1px 0 variables.$gray--light;
-    }
-  }
-
-  &--form {
-    grid-area: form;
-
-    @media (min-width: variables.$desktop-width) {
-      background-color: variables.$white;
-      box-shadow: inset 0 -1px 0 variables.$gray--light;
-    }
-  }
-
-  &--logo {
-    grid-area: logo;
-
-    @media (max-width: variables.$mobile-width-only) {
-      display: flex;
-    }
-
-    @media (min-width: variables.$tablet-width) {
-      justify-self: stretch;
-      padding-left: 50px;
-      background-color: variables.$white;
-      box-shadow: inset 0 -1px 0 variables.$gray--light;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      padding-left: 0;
+      box-shadow: inset -1px 0 0 variables.$gray--light;
     }
   }
 
   &--search {
-    grid-area: search;
-
     @media (min-width: variables.$tablet-width) {
-      background-color: variables.$white;
+      flex-grow: 0;
+      width: 84px;
+      height: 89px;
       box-shadow: inset 1px 0 0 variables.$gray--light,
-        inset -1px 0 0 variables.$gray--light,
-        inset 0 -1px 0 variables.$gray--light;
+        inset -1px 0 0 variables.$gray--light;
     }
 
     & span {
@@ -187,48 +230,8 @@
   }
 
   &--cart {
-    grid-area: cart;
-
     @media (min-width: variables.$tablet-width) {
-      display: flex;
-      align-items: center;
-      justify-content: end;
-      padding-right: 50px;
-      background-color: variables.$white;
-      box-shadow: inset 0 -1px 0 variables.$gray--light;
-    }
-  }
-
-  &--new {
-    grid-area: new;
-
-    @media (max-width: variables.$max-tablet-width) {
-      @include base.visually-hidden;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      padding-left: 51px;
-    }
-  }
-
-  &--sale {
-    grid-area: sale;
-
-    @media (max-width: variables.$max-tablet-width) {
-      @include base.visually-hidden;
-    }
-  }
-
-  &--delivery {
-    grid-area: delivery;
-
-    @media (max-width: variables.$mobile-width-only) {
-      @include base.visually-hidden;
-    }
-
-    @media (min-width: variables.$tablet-width) {
-      justify-self: end;
-      padding-right: 50px;
+      flex-grow: 0;
     }
   }
 
@@ -258,7 +261,7 @@
   position: relative;
   display: block;
   margin: 0;
-  padding: 20px 10px;
+  padding: 20px 0;
   box-sizing: border-box;
   font-size: 15px;
   font-weight: 700;
@@ -284,54 +287,38 @@
   }
 
   &--catalog {
-    @media (min-width: variables.$tablet-width) {
-      padding: 20px 0;
+    @media (min-width: variables.$desktop-width) {
+      padding: 33px 37px 32px 0;
+      font-size: 17px;
     }
+  }
 
+  &--form {
     @media (min-width: variables.$desktop-width) {
       padding: 33px 0 32px 0;
       font-size: 17px;
     }
   }
 
-  &--form {
-    @media (min-width: variables.$tablet-width) {
-      padding: 20px 0;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      padding: 33px 0 32px 35px;
-      font-size: 17px;
-    }
-  }
-
   &--search {
     @media (min-width: variables.$tablet-width) {
-      padding: 36px 32px 34px 34px;
+      display: flex;
+      width: 100%;
+      height: 100%;
     }
   }
 
   &--cart {
     @media (min-width: variables.$tablet-width) {
-      padding: 20px 0 20px 52px;
+      padding-left: 52px;
       font-size: 17px;
     }
-
-    @media (min-width: variables.$desktop-width) {
-      padding: 33px 2px 32px 52px;
-    }
-  }
-
-  &--new {
-    padding: 20px 0;
-  }
-
-  &--sale {
-    padding: 20px 0 20px 35px;
   }
 }
 
 .main-nav__logo {
+  display: flex;
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -348,11 +335,6 @@
 
   @media (max-width: variables.$mobile-width-only) {
     margin: 0 auto;
-  }
-
-  @media (min-width: variables.$tablet-width) {
-    display: block;
-    width: 113px;
   }
 }
 
@@ -373,12 +355,23 @@
 
 .main-nav__text {
   display: block;
+  max-width: 675px;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 50px 20px 0;
+  box-sizing: border-box;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
   color: variables.$black;
+  text-align: end;
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include base.visually-hidden;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 3 / 4;
+  }
 }
 
 .main-nav__search-icon {
@@ -398,6 +391,7 @@
   @media (min-width: variables.$tablet-width) {
     position: static;
     display: block;
+    margin: auto;
   }
 }
 
