@@ -47,9 +47,13 @@
       "reviews reviews";
     grid-template-columns: auto 175px;
     padding: 78px 0 50px 50px;
-    background-image: url("../img/index/index-review-background-image.jpg");
+    background-image: url("../img/index/index-review-bg.jpg");
     background-repeat: no-repeat;
     background-size: auto 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/index-review-bg@2x.jpg");
+    }
   }
 
   @media (min-width: variables.$desktop-width) {

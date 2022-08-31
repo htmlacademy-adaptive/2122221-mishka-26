@@ -162,11 +162,8 @@
   margin: 0;
 }
 
-.featured__image {
-  display: block;
+.featured__image-wrapper {
   grid-area: image;
-  width: 100%;
-  height: auto;
   margin-bottom: 26px;
 
   @media (min-width: variables.$tablet-width) {
@@ -177,6 +174,13 @@
   @media (min-width: variables.$desktop-width) {
     margin-top: 0;
   }
+}
+
+.featured__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .featured__price-wrapper {

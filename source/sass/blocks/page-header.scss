@@ -5,7 +5,6 @@
   position: relative;
   background-color: variables.$gray--lightest;
   background-repeat: no-repeat;
-  background-size: contain;
 
   &::after {
     content: "";
@@ -29,7 +28,34 @@
   }
 
   &--index-background-image {
-    background-image: url("../img/index/index-header-background-image.jpg");
+    @media (max-width: variables.$mobile-width-only) {
+      background-image: url("../img/index/index-header-bg-mobile.jpg");
+      background-position: 50% -17px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/index-header-bg-mobile@2x.jpg");
+        background-size: 320px auto;
+      }
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../img/index/index-header-bg-tablet.jpg");
+      background-position: 50% -65px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/index-header-bg-tablet@2x.jpg");
+        background-size: 768px auto;
+      }
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-image: url("../img/index/index-header-bg-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/index-header-bg-desktop@2x.jpg");
+        background-size: 1150px auto;
+      }
+    }
   }
 }
 
