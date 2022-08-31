@@ -1,0 +1,6 @@
+@use "../global/variables.scss";
+@use "../global/base.scss";
+
+.main-form__form {
+  @include base.container;
+}

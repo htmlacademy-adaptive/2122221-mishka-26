@@ -1,33 +1,150 @@
 @use "../global/variables.scss";
 
 .field {
+  display: grid;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 1fr 3fr;
+    gap: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+
+  &--name-fields {
+    @media (min-width: variables.$tablet-width) {
+      grid-template-columns: min-content auto;
+      align-items: center;
+      gap: 26px;
+    }
+  }
 }
 
 .field__label {
   font-weight: 700;
   line-height: 18px;
   color: variables.$black;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 19px;
+  }
+}
+
+.field__wrapper {
+  position: relative;
+  display: grid;
 }
 
 .field__input {
+  padding: 17px 17px 15px 0;
   font-family: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  color: inherit;
+  border: none;
+  border-bottom: 2px solid variables.$black;
+  background-color: transparent;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 14px 17px 10px 17px;
+    font-size: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid variables.$blue--light;
+    outline: none;
+  }
 
   &::placeholder {
     font-size: 17px;
     line-height: 18px;
     color: variables.$black;
     opacity: 0.3;
+
+    @media (min-width: variables.$tablet-width) {
+      font-size: 19px;
+    }
   }
+
+  &--icon {
+    padding-right: 52px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-right: 71px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-right: 53px;
+    }
+  }
+}
+
+.field__icon {
+  position: absolute;
+  color: rgba(variables.$black, 0.2);
+  pointer-events: none;
+
+  &--phone {
+    top: 11px;
+    right: 7px;
+
+    @media (min-width: variables.$tablet-width) {
+      right: 26px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      right: 8px;
+    }
+  }
+
+  &--email {
+    top: 15px;
+    right: 3px;
+
+    @media (min-width: variables.$tablet-width) {
+      top: 16px;
+      right: 22px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      right: 4px;
+    }
+  }
+}
+
+.field__input:hover + .field__icon,
+.field__input:focus + .field__icon {
+  color: variables.$blue--light;
 }
 
 .field__textarea {
   font-family: inherit;
+  font-size: 19px;
+  line-height: 18px;
+  color: variables.$black;
+  height: 142px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2px solid variables.$gray--darken;
+  resize: none;
+
+  &:hover,
+  &:focus {
+    border-color: variables.$blue--light;
+    outline: none;
+  }
 
   &::placeholder {
     font-size: 17px;
     line-height: 18px;
     color: variables.$black;
     opacity: 0.3;
+
+    @media (min-width: variables.$tablet-width) {
+      font-size: 19px;
+    }
   }
 }

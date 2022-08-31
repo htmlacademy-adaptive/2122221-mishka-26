@@ -1,15 +1,26 @@
 @use "../global/variables.scss";
 
+.products {
+  padding: 0 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 50px;
+  }
+}
+
 .products__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 30px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: variables.$tablet-width) {
+    gap: 53px;
+  }
+
   @media (min-width: variables.$desktop-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
   }
 }
