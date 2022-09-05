@@ -13,6 +13,12 @@ mainNavToggle.addEventListener('click', function () {
   }
 });
 
+const contactsMap = document.querySelector('.contacts__map');
+
+if (contactsMap) {
+  contactsMap.classList.remove('contacts__map--nojs');
+}
+
 
 const modalOverlay = document.querySelector('.modal-overlay');
 const featuredButton = document.querySelector('.featured__order');
@@ -29,6 +35,8 @@ if (featuredButton) {
 if (productCardsButtons.length) {
   productCardsButtons.forEach(productCardsButton => {
     productCardsButton.addEventListener('click', function (event) {
+      event.preventDefault();
+
       modalOverlay.classList.add('modal-overlay--open');
     });
   });

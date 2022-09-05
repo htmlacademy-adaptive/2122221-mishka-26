@@ -179,8 +179,17 @@
 .featured__image {
   width: 100%;
   height: auto;
+  max-height: 350px;
   object-fit: contain;
   display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    max-height: 500px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-height: 700px;
+  }
 }
 
 .featured__price-wrapper {
