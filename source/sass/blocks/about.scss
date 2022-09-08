@@ -69,7 +69,7 @@
       left: 8px;
       width: 33px;
       height: 38px;
-      background-image: url("../img/icons/about-ecology.svg");
+      background-image: url("../img/index/about-ecology.svg");
     }
   }
 
@@ -87,7 +87,7 @@
       left: 0;
       width: 47px;
       height: 27px;
-      background-image: url("../img/icons/about-price.svg");
+      background-image: url("../img/index/about-price.svg");
     }
   }
 
@@ -105,7 +105,7 @@
       left: 7px;
       width: 34px;
       height: 27px;
-      background-image: url("../img/icons/about-like.svg");
+      background-image: url("../img/index/about-like.svg");
     }
   }
 
@@ -119,7 +119,7 @@
       left: 3px;
       width: 35px;
       height: 34px;
-      background-image: url("../img/icons/about-knitting.svg");
+      background-image: url("../img/index/about-knitting.svg");
     }
   }
 
@@ -137,7 +137,7 @@
       left: -5px;
       width: 55px;
       height: 23px;
-      background-image: url("../img/icons/about-domestic.svg");
+      background-image: url("../img/index/about-domestic.svg");
     }
   }
 
@@ -156,13 +156,7 @@
       left: 3px;
       width: 33px;
       height: 32px;
-      background-image: url("../img/icons/about-gift.svg");
+      background-image: url("../img/index/about-gift.svg");
     }
-  }
-}
-
-.about__item br {
-  @media (max-width: variables.$mobile-width-only) {
-    display: none;
   }
 }
