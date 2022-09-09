@@ -10,6 +10,10 @@
     gap: 23px;
   }
 
+  &--disabled {
+    pointer-events: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
     gap: 29px;
   }
@@ -23,6 +27,10 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 19px;
   }
+}
+
+.control--disabled .control__label {
+  color: rgba(variables.$gray--darken, 0.3);
 }
 
 .control__mark {
@@ -39,6 +47,10 @@
 
 .control:active .control__mark {
   border-color: rgba(variables.$blue--light, 0.3);
+}
+
+.control--disabled .control__mark {
+  border-color: rgba(variables.$gray--darken, 0.3);
 }
 
 .control--radio .control__mark {
@@ -71,6 +83,10 @@
   }
 }
 
+.control--radio.control--disabled .control__input:checked + .control__mark::before {
+  background-color: rgba(variables.$gray--darken, 0.3);
+}
+
 .control--checkbox .control__mark {
   width: 38px;
   height: 38px;
@@ -99,4 +115,8 @@
     width: 14px;
     height: 27px;
   }
+}
+
+.control--checkbox.control--disabled .control__input:checked + .control__mark::before {
+  border-color: rgba(variables.$gray--darken, 0.3);
 }
