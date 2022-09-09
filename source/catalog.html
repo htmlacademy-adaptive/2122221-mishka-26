@@ -86,7 +86,7 @@
     <section class="main-catalog__products products">
       <h2 class="visually-hidden">Товары</h2>
       <ul class="products__list">
-        <li class="products__item product-card">
+        <li class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
@@ -120,7 +120,7 @@
             </div>
           </div>
         </li>
-        <li class="products__item product-card">
+        <li class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
@@ -154,7 +154,7 @@
             </div>
           </div>
         </li>
-        <li class="products__item product-card">
+        <li class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
@@ -231,11 +231,11 @@
         </svg>
         <span class="visually-hidden">Логотип магазина «Мишка».</span>
       </a>
-      <section class="main-footer__social social">
+      <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+          <li>
+            <a class="social__link" href="https://vk.com/htmlacademy">
               <svg class="social__link-icon" aria-hidden="true" focusable="false" width="28" height="23"
                 fill="currentColor">
                 <use href="img/sprite.svg#icon-vkontakte" />
@@ -243,8 +243,8 @@
               <span class="visually-hidden">ВКонтакте.</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <li>
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
               <svg class="social__link-icon" aria-hidden="true" focusable="false" width="28" height="23"
                 fill="currentColor">
                 <use href="img/sprite.svg#icon-youtube" />
@@ -252,8 +252,8 @@
               <span class="visually-hidden">Youtube.</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+          <li>
+            <a class="social__link" href="https://t.me/htmlacademy">
               <svg class="social__link-icon" aria-hidden="true" focusable="false" width="28" height="23"
                 fill="currentColor">
                 <use href="img/sprite.svg#icon-telegram" />
@@ -263,7 +263,7 @@
           </li>
         </ul>
       </section>
-      <section class="main-footer__copyright copyright">
+      <section class="copyright">
         <h2 class="copyright__title">Разработано</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__logo-htmlacademy" aria-hidden="true" focusable="false" width="27" height="35"
@@ -279,7 +279,7 @@
   <div class="modal-overlay">
     <div class="modal-cart">
       <h2 class="modal-cart__title">Добавить в&nbsp;корзину</h2>
-      <form class="modal-cart__form size-form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="size-form" action="https://echo.htmlacademy.ru/" method="post">
         <p class="size-form__title">Выберите размер:</p>
         <ul class="size-form__list">
           <li class="size-form__item">
@@ -295,7 +295,7 @@
               class="size-form__label" for="L">L</label>
           </li>
         </ul>
-        <button class="size-form__button button button--secondary" type="submit">Добавить</button>
+        <button class="button button--secondary" type="submit">Добавить</button>
       </form>
     </div>
   </div>
