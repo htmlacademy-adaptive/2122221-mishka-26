@@ -48,8 +48,13 @@
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 55px;
+    padding-right: 40px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-right: 50px;
   }
 
   &::before {
@@ -62,6 +67,14 @@
     @media (max-width: variables.$mobile-width-only) {
       padding-top: 55px;
       padding-right: 63px;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      padding-right: 102px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-right: 118px;
     }
 
     &::before {
@@ -114,6 +127,10 @@
       padding-right: 4px;
     }
 
+    @media (min-width: variables.$desktop-width) {
+      padding-right: 48px;
+    }
+
     &::before {
       top: 2px;
       left: 3px;
@@ -149,6 +166,10 @@
 
     @media (min-width: variables.$tablet-width) {
       order: 3;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-right: 55px;
     }
 
     &::before {
