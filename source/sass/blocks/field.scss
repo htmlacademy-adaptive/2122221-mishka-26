@@ -58,6 +58,13 @@
     outline: none;
   }
 
+  &--error,
+  &--error:focus,
+  &--error:hover {
+    color: variables.$red;
+    border-bottom: 2px solid variables.$red;
+  }
+
   &::placeholder {
     font-size: 17px;
     line-height: 18px;
@@ -120,6 +127,11 @@
   color: variables.$blue--light;
 }
 
+.field__input--error:hover + .field__icon,
+.field__input--error:focus + .field__icon {
+  color: variables.$red;
+}
+
 .field__textarea {
   font-family: inherit;
   font-size: 19px;
@@ -137,6 +149,13 @@
   &:focus {
     box-shadow: inset 0 0 0 2px variables.$blue--light;
     outline: none;
+  }
+
+  &--error,
+  &--error:focus,
+  &--error:hover {
+    color: variables.$red;
+    box-shadow: inset 0 0 0 2px variables.$red;
   }
 
   &::placeholder {

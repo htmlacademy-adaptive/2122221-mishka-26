@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка. Вязание на заказ</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -47,7 +47,7 @@
             <a class="main-nav__link main-nav__link--search" href="#">
               <svg class="main-nav__search-icon" aria-hidden="true" focusable="false" width="18" height="18"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-search"></use>
+                <use href="img/sprite.svg#icon-search"/>
               </svg>
               <span>Поиск по сайту</span>
             </a>
@@ -56,7 +56,7 @@
             <a class="main-nav__link main-nav__link--cart" href="#">
               <svg class="main-nav__cart-icon" aria-hidden="true" focusable="false" width="21" height="18"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-cart"></use>
+                <use href="img/sprite.svg#icon-cart"/>
               </svg>
               Корзина: пока пуста</a>
           </li>
@@ -87,88 +87,88 @@
       <h2 class="form__title">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</h2>
 
-      <fieldset class="form__group group group--radio">
+      <fieldset class="group group--radio">
         <legend class="group__title">Тип</legend>
         <ul class="group__list">
-          <li class="group__item">
+          <li>
             <label class="control control--radio">
               <input class="visually-hidden control__input" name="type" type="radio" value="interior" checked>
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Аксессуар для интерьера</span>
             </label>
           </li>
-          <li class="group__item">
+          <li>
             <label class="control control--radio">
               <input class="visually-hidden control__input" name="type" type="radio" value="toys">
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Детская игрушка</span>
             </label>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="form__group group group--checkboxes">
+      <fieldset class="group group--checkboxes">
         <legend class="group__title">Цвет</legend>
         <ul class="group__list">
-          <li class="group__item">
+          <li>
             <label class="control control--checkbox">
               <input class="visually-hidden control__input" type="checkbox" name="white" checked>
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Белый</span>
             </label>
           </li>
-          <li class="group__item">
+          <li>
             <label class="control control--checkbox">
               <input class="visually-hidden control__input" type="checkbox" name="grey" checked>
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Серый</span>
             </label>
           </li>
-          <li class="group__item">
+          <li>
             <label class="control control--checkbox">
               <input class="visually-hidden control__input" type="checkbox" name="tiffany">
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Тиффани</span>
             </label>
           </li>
-          <li class="group__item">
+          <li>
             <label class="control control--checkbox">
               <input class="visually-hidden control__input" type="checkbox" name="black">
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Черный</span>
             </label>
           </li>
-          <li class="group__item">
+          <li>
             <label class="control control--checkbox">
               <input class="visually-hidden control__input" type="checkbox" name="pink">
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Розовый</span>
             </label>
           </li>
-          <li class="group__item">
+          <li>
             <label class="control control--checkbox">
               <input class="visually-hidden control__input" type="checkbox" name="orange">
-              <span class="control__mark control__mark"></span>
+              <span class="control__mark"></span>
               <span class="control__label">Оранжевый</span>
             </label>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="form__group group group--name-fields">
+      <fieldset class="group group--name-fields">
         <legend class="group__title">ФИО</legend>
         <ul class="group__list">
-          <li class="group__item field field--name-fields">
+          <li class="field field--name-fields">
             <label class="field__label" for="first-name">Имя:</label>
             <input class="field__input" type="text" placeholder="Введите ваше имя*" name="first-name" id="first-name"
               required>
           </li>
-          <li class="group__item field field--name-fields">
+          <li class="field field--name-fields">
             <label class="field__label" for="last-name">Фамилия:</label>
             <input class="field__input" type="text" placeholder="Укажите фамилию*" name="last-name" id="last-name"
               required>
           </li>
-          <li class="group__item field field--name-fields">
+          <li class="field field--name-fields">
             <label class="field__label" for="patronymic-name">Отчество:</label>
             <input class="field__input" type="text" placeholder="Отчество, если желаете" name="patronymic-name"
               id="patronymic-name">
@@ -176,35 +176,35 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__group group group--contacts">
+      <fieldset class="group group--contacts">
         <ul class="group__list">
-          <li class="group__item field field">
+          <li class="field">
             <label class="group__title" for="phone">Тел</label>
             <div class="field__wrapper">
               <input class="field__input field__input--icon" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" name="phone"
                 id="phone" required>
               <svg class="field__icon field__icon--phone" aria-hidden="true" focusable="false" width="25" height="24"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-phone"></use>
+                <use href="img/sprite.svg#icon-phone"/>
               </svg>
             </div>
           </li>
-          <li class="group__item field field">
+          <li class="field">
             <label class="group__title" for="email">E-mail</label>
             <div class="field__wrapper">
               <input class="field__input field__input--icon" type="email" placeholder="Ваш Email*" name="email"
                 id="email" required>
               <svg class="field__icon field__icon--email" aria-hidden="true" focusable="false" width="32" height="21"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-email"></use>
+                <use href="img/sprite.svg#icon-email"/>
               </svg>
             </div>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="form__group group group--additional">
-        <p class="group__item field field">
+      <fieldset class="group group--additional">
+        <p class="field">
           <label class="group__title" for="additionally">Доп</label>
           <textarea class="field__textarea" placeholder="Опишите все ваши пожелания к заказу" name="additionally"
             id="additionally"></textarea>
@@ -223,48 +223,48 @@
       <a class="main-footer__logo" href="index.html">
         <svg class="main-footer__logo-image" aria-hidden="true" focusable="false" width="102" height="34"
           fill="currentColor">
-          <use href="img/sprite.svg#logo-mishka-footer"></use>
+          <use href="img/sprite.svg#logo-mishka-footer"/>
         </svg>
         <span class="visually-hidden">Логотип магазина «Мишка».</span>
       </a>
-      <section class="main-footer__social social">
+      <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+          <li>
+            <a class="social__link" href="https://vk.com/htmlacademy">
               <svg class="social__link-icon" aria-hidden="true" focusable="false" width="28" height="23"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-vkontakte"></use>
+                <use href="img/sprite.svg#icon-vkontakte"/>
               </svg>
               <span class="visually-hidden">ВКонтакте.</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <li>
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
               <svg class="social__link-icon" aria-hidden="true" focusable="false" width="28" height="23"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-youtube"></use>
+                <use href="img/sprite.svg#icon-youtube"/>
               </svg>
               <span class="visually-hidden">Youtube.</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+          <li>
+            <a class="social__link" href="https://t.me/htmlacademy">
               <svg class="social__link-icon" aria-hidden="true" focusable="false" width="28" height="23"
                 fill="currentColor">
-                <use href="img/sprite.svg#icon-telegram"></use>
+                <use href="img/sprite.svg#icon-telegram"/>
               </svg>
               <span class="visually-hidden">Телеграм.</span>
             </a>
           </li>
         </ul>
       </section>
-      <section class="main-footer__copyright copyright">
+      <section class="copyright">
         <h2 class="copyright__title">Разработано</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__logo-htmlacademy" aria-hidden="true" focusable="false" width="27" height="35"
             fill="currentColor">
-            <use href="img/sprite.svg#logo-htmlacademy"></use>
+            <use href="img/sprite.svg#logo-htmlacademy"/>
           </svg>
           <span class="visually-hidden">Логотип сайта разработчика «HTML Academy».</span>
         </a>
