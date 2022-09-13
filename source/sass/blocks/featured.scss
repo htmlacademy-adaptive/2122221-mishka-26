@@ -39,19 +39,19 @@
     height: 6px;
     background-image: url("../img/index/zigzag-line.svg");
     background-repeat: repeat-x;
-    background-size: auto 6px;
+    background-size: 16px 6px;
 
     @media (min-width: variables.$tablet-width) {
       height: 17px;
       background-image: url("../img/index/zigzag-line.svg");
-      background-size: auto 17px;
+      background-size: 38.5px 17px;
     }
 
     @media (min-width: variables.$desktop-width) {
       right: 50px;
       left: 50px;
       height: 23px;
-      background-size: auto 23px;
+      background-size: 52.5px 23px;
     }
   }
 }
