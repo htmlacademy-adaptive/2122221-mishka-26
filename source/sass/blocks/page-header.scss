@@ -18,16 +18,23 @@
 
     @media (min-width: variables.$tablet-width) {
       height: 24px;
-      background-size: auto 24px;
+      background-size: 38.5px 24px;
     }
 
     @media (min-width: variables.$desktop-width) {
       height: 34px;
-      background-size: auto 34px;
+      background-size: 57.5px 34px;
     }
   }
 
   &--index-background-image {
+    &::after {
+      @media (min-width: variables.$desktop-width) {
+        left: -50px;
+        background-size: 62.5px 34px;
+      }
+    }
+
     @media (max-width: variables.$mobile-width-only) {
       background-image: image-set(url("../img/index/index-header-bg-mobile@2x.webp") 2x,
           url("../img/index/index-header-bg-mobile.webp") 1x,
